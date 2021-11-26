@@ -12,7 +12,7 @@ const Slide = () => {
         <div className={s.btnContainer}>
           <Button type="white" title="BUY NOW" />
         </div>
-        <img src={ring} alt="ring photo" />
+        <img src={ring} alt="ring" />
       </div>
       <div className={s.ui}>
         <button>{"<"}</button>

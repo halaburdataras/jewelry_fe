@@ -7,7 +7,7 @@ const Card = ({ price, description, image, action }) => {
   return (
     <div className={s.card}>
       <div className={s.imageContainer}>
-        <img src={image} />
+        <img src={image} alt="main" />
       </div>
       <div className={s.actionsContainer}>
         <p className={s.desc}>
