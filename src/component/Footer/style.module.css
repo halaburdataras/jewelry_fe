@@ -1,0 +1,31 @@
+footer {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  height: 221px;
+  width: 100%;
+  background: rgba(5, 20, 56, 0.05);
+  margin-top: 124px;
+}
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.container.left {
+  margin-left: 80px;
+  justify-content: flex-start;
+}
+.container.right {
+  margin-right: 80px;
+  justify-content: flex-end;
+}
+
+.copyright {
+  position: absolute;
+  width: 100%;
+  text-align: center;
+  bottom: 10px;
+  color: rgba(0, 0, 0, 0.2);
+}

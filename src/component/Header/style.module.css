@@ -1,0 +1,15 @@
+header {
+  height: 134px;
+  display: flex;
+}
+
+.menu {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li + li {
+  margin-left: 100px;
+}

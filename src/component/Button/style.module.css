@@ -1,0 +1,57 @@
+.button {
+  width: 100%;
+  height: 100%;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  transition: 0.1s all ease-in-out;
+}
+
+.button:hover .title {
+  margin-bottom: 10px;
+}
+
+.star {
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transition: 0.2s all ease-in-out;
+  cursor: pointer;
+}
+
+.title {
+  transition: 0.2s all ease-in-out;
+}
+
+.whiteBtn {
+  background-color: #fff;
+  color: #060c1b;
+}
+.whiteBtn .star {
+  background-image: url(../../assets/svg/star_white.svg);
+}
+
+.blackBtn {
+  background-color: #061028;
+  color: #fff;
+}
+
+.grayBtn {
+  background-color: rgba(255, 255, 255, 0.1);
+}
+.grayBtn.active {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+.grayBtn .star {
+  background-image: url(../../assets/svg/star_gray.svg);
+}
+.grayBtn:hover .star {
+  background-image: url(../../assets/svg/star_gray_active.svg);
+}
