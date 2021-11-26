@@ -4,18 +4,24 @@ import Logo from "../Logo";
 
 import s from "./style.module.css";
 
-const Header = () => {
+const Header = ({ setOpen }) => {
+  const handleOpenCart = () => {
+    setOpen("half");
+  };
   return (
     <header>
       <ul className={s.menu}>
         <li>Home</li>
-        <li>Rings</li>
+        <li>Catalog</li>
         <li>
           <Logo />
         </li>
-        <li>Cart</li>
         <li>FAQ</li>
+        <li>Follow us</li>
       </ul>
+      <div className={s.cart} onClick={handleOpenCart}>
+        cart
+      </div>
     </header>
   );
 };
