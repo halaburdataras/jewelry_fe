@@ -13,8 +13,8 @@ function App() {
         <Slider />
         <Catalog />
       </section>
-      <Cart />
       <Footer />
+      <Cart />
     </div>
   );
 }
