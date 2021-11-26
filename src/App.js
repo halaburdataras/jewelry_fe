@@ -1,4 +1,5 @@
 import "./App.css";
+import Cart from "./component/Cart";
 import Catalog from "./component/Catalog";
 import Footer from "./component/Footer";
 import Header from "./component/Header";
@@ -12,6 +13,7 @@ function App() {
         <Slider />
         <Catalog />
       </section>
+      <Cart />
       <Footer />
     </div>
   );
