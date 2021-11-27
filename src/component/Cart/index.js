@@ -3,17 +3,7 @@ import Button from "../Button";
 
 import s from "./style.module.css";
 
-const Cart = ({ open, setOpen }) => {
-  const getStyle = () => {
-    switch (open) {
-      case "half":
-        return s.half;
-      case "full":
-        return s.full;
-      default:
-        break;
-    }
-  };
+const Cart = ({ setOpen }) => {
   const handleCloseCart = () => {
     setOpen("close");
   };
@@ -21,7 +11,7 @@ const Cart = ({ open, setOpen }) => {
     setOpen("full");
   };
   return (
-    <section className={`${s.cart} ${getStyle()}`}>
+    <section className={`${s.cart}`}>
       <div className={s.header}>
         <div className={s.close} onClick={handleCloseCart} />
         <div className={s.info}>

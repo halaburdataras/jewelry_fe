@@ -1,9 +1,15 @@
 header {
   height: 134px;
   width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(40px);
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
 }
 
 .menu {
