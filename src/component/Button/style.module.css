@@ -28,6 +28,8 @@
 
 .title {
   transition: 0.2s all ease-in-out;
+  cursor: pointer;
+  z-index: 1;
 }
 
 .whiteBtn {
@@ -41,6 +43,10 @@
 .blackBtn {
   background-color: #061028;
   color: #fff;
+}
+
+.blackBtn .star {
+  background-image: url(../../assets/svg/star_black.svg);
 }
 
 .grayBtn {

@@ -1,8 +1,9 @@
 .cart {
+  height: 100%;
+  width: 480px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  height: 100%;
 }
 
 .header {
@@ -42,4 +43,12 @@
 .btnContainer {
   width: 100%;
   height: 70px;
+}
+
+.content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  height: calc(100% - 70px - 178px);
+  overflow: auto;
 }

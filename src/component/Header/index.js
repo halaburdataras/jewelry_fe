@@ -1,6 +1,7 @@
 import React from "react";
 
 import Logo from "../Logo";
+import cart from "../../assets/svg/cart.svg";
 
 import s from "./style.module.css";
 
@@ -20,7 +21,8 @@ const Header = ({ setOpen }) => {
         <li>Follow us</li>
       </ul>
       <div className={s.cart} onClick={handleOpenCart}>
-        cart
+        <img src={cart} alt="cart" />
+        <span className={s.cartText}>Cart</span>
       </div>
     </header>
   );

@@ -17,7 +17,11 @@ const Modal = ({ open, setOpen }) => {
   };
   return (
     <div className={`${s.modal} ${getStyle()}`}>
-      {open === "full" ? <Order /> : <Cart setOpen={setOpen} />}
+      {open === "full" ? (
+        <Order setOpen={setOpen} />
+      ) : (
+        <Cart setOpen={setOpen} />
+      )}
     </div>
   );
 };

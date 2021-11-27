@@ -10,6 +10,7 @@ header {
   position: fixed;
   left: 0;
   top: 0;
+  border-bottom: 1px solid rgba(13, 8, 78, 0.2);
 }
 
 .menu {
@@ -26,4 +27,14 @@ header {
 .cart {
   position: absolute;
   right: 80px;
+  display: flex;
+  align-items: center;
+}
+
+.cartText {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #060a16;
+  margin-left: 4px;
 }

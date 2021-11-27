@@ -1,0 +1,32 @@
+.cartItem {
+  width: 100%;
+  height: 80px;
+  display: grid;
+  grid-template-columns: 80px 1fr 50px;
+  background: rgba(255, 255, 255, 0.6);
+}
+
+.image {
+  width: 80px;
+  height: 80px;
+  background: linear-gradient(283.69deg, #050505 -3.61%, #06102b 100.15%);
+}
+
+.text {
+  padding: 13px 0 13px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.cartItem + .cartItem {
+  border-top: 1px solid rgba(0, 0, 64, 0.05);
+}
+
+.checkbox {
+  width: 20px;
+  height: 20px;
+  background: #ffffff;
+  border: 1px solid rgba(6, 13, 31, 0.1);
+  align-self: center;
+}
