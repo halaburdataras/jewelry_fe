@@ -1,8 +1,6 @@
 import React from "react";
 
-import s from "./style.module.css";
-
-const Order = ({ isOpen }) => {
+const Order = () => {
   return <div>Order</div>;
 };
 
