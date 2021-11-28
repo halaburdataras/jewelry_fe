@@ -20,11 +20,16 @@ header {
   align-items: center;
 }
 
+.menu li {
+  cursor: pointer;
+}
+
 .menu li + li {
   margin-left: 100px;
 }
 
 .cart {
+  cursor: pointer;
   position: absolute;
   right: 80px;
   display: flex;

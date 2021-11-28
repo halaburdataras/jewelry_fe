@@ -5,9 +5,12 @@ import cart from "../../assets/svg/cart.svg";
 
 import s from "./style.module.css";
 
-const Header = ({ setOpen }) => {
+const Header = ({ setOpenCart, setOpenFollow }) => {
   const handleOpenCart = () => {
-    setOpen("half");
+    setOpenCart("half");
+  };
+  const handleOpenFollow = () => {
+    setOpenFollow(true);
   };
   return (
     <header>
@@ -18,7 +21,7 @@ const Header = ({ setOpen }) => {
           <Logo />
         </li>
         <li>FAQ</li>
-        <li>Follow us</li>
+        <li onClick={handleOpenFollow}>Follow us</li>
       </ul>
       <div className={s.cart} onClick={handleOpenCart}>
         <img src={cart} alt="cart" />
