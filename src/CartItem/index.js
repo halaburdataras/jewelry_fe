@@ -5,7 +5,7 @@ import s from "./style.module.css";
 const CartItem = ({ img, name, price, checkbox, action }) => {
   return (
     <div className={s.cartItem}>
-      <img src={img} className={s.image} />
+      <img src={img} className={s.image} alt="selected ring" />
       <div className={s.text}>
         <p>{price}</p>
         <p>{name}</p>
