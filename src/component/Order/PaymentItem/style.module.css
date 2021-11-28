@@ -1,0 +1,25 @@
+.radioLabel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ededf2;
+  border: 2px solid transparent;
+  transition: 0.3s all ease-in-out;
+}
+.radioContainer input {
+  display: none;
+}
+.radioLabel:hover {
+  border: 2px solid rgb(211, 214, 249);
+}
+
+.radioLabel.active {
+  background: rgb(211, 214, 249);
+}
+
+.bigRow {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}

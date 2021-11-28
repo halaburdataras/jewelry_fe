@@ -11,6 +11,7 @@ import CartItem from "../../CartItem";
 import Button from "../Button";
 
 import s from "./style.module.css";
+import PaymentItem from "./PaymentItem";
 
 const Order = ({ setOpen }) => {
   const [payment, setPayment] = useState(null);
@@ -38,7 +39,7 @@ const Order = ({ setOpen }) => {
               All — <span className={s.price}>35 200₴</span>
             </p>
           </div>
-          <div>
+          <div className={s.items}>
             <CartItem
               img={img}
               price="4400 UAH"
@@ -116,101 +117,45 @@ const Order = ({ setOpen }) => {
             </p>
           </div>
           <div className={s.radioGrid}>
-            <div className={`${s.radioContainer} ${s.bigRow}`}>
-              <input
-                type="radio"
-                name="payment"
-                id="applePay"
-                onChange={() => {
-                  handleChange("applePay");
-                }}
-              />
-              <label
-                for="applePay"
-                value="apple"
-                className={`${s.radioLabel} ${
-                  payment === "applePay" && s.active
-                }`}
-              >
-                <img src={appleLogo} alt="apple pay" />
-              </label>
-            </div>
-            <div className={`${s.radioContainer} ${s.bigRow}`}>
-              <input
-                type="radio"
-                name="payment"
-                id="googlePay"
-                onChange={() => {
-                  handleChange("googlePay");
-                }}
-              />
-              <label
-                for="googlePay"
-                className={`${s.radioLabel} ${
-                  payment === "googlePay" && s.active
-                }`}
-              >
-                <img src={googleLogo} alt="google pay" />
-              </label>
-            </div>
-            <div className={`${s.radioContainer} ${s.bigRow}`}>
-              <input
-                type="radio"
-                name="payment"
-                id="fondy"
-                onChange={() => {
-                  handleChange("fondy");
-                }}
-              />
-              <label
-                for="fondy"
-                className={`${s.radioLabel} ${payment === "fondy" && s.active}`}
-              >
-                <img src={fondyLogo} alt="fondy" />
-              </label>
-            </div>
-            <div className={s.radioContainer}>
-              <input
-                type="radio"
-                name="payment"
-                id="monoBank"
-                onChange={() => {
-                  handleChange("monoBank");
-                }}
-              />
-              <label
-                for="monoBank"
-                className={`${s.radioLabel} ${
-                  payment === "monoBank" && s.active
-                }`}
-              >
-                <img src={monoLogo} alt="monobank" />
-              </label>
-            </div>
-            <div className={s.radioContainer}>
-              <input
-                type="radio"
-                name="payment"
-                id="privatBank"
-                onChange={() => {
-                  handleChange("privatBank");
-                }}
-              />
-              <label
-                for="privatBank"
-                className={`${s.radioLabel} ${
-                  payment === "privatBank" && s.active
-                }`}
-              >
-                <img src={privatLogo} alt="privatbank" />
-              </label>
-            </div>
+            <PaymentItem
+              handleChange={handleChange}
+              name="applePay"
+              payment={payment}
+              img={appleLogo}
+              big
+            />
+            <PaymentItem
+              handleChange={handleChange}
+              name="googlePay"
+              payment={payment}
+              img={googleLogo}
+              big
+            />
+            <PaymentItem
+              handleChange={handleChange}
+              name="fondy"
+              payment={payment}
+              img={fondyLogo}
+              big
+            />
+            <PaymentItem
+              handleChange={handleChange}
+              name="monoBank"
+              payment={payment}
+              img={monoLogo}
+            />
+            <PaymentItem
+              handleChange={handleChange}
+              name="privatBank"
+              payment={payment}
+              img={privatLogo}
+            />
           </div>
         </div>
       </div>
       <div className={s.footer}>
         <div className={s.buttonContainer}>
-          <Button type="black" title="COMPLETE ORDER" />
+          <Button type="black" title="ORDER NOW" />
         </div>
       </div>
     </div>

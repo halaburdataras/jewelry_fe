@@ -23,8 +23,12 @@
   width: 570px;
   display: flex;
   flex-direction: column;
-  overflow: auto;
   padding-right: 10px;
+}
+
+.items {
+  height: 456px;
+  overflow: auto;
 }
 
 .deliveryContainer {
@@ -149,27 +153,4 @@
   column-gap: 10px;
   grid-template-rows: repeat(4, 1fr);
   row-gap: 10px;
-}
-
-.bigRow {
-  grid-column-start: 1;
-  grid-column-end: 3;
-}
-
-.radioContainer input {
-  display: none;
-}
-
-.radioLabel {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: #ededf2;
-  transition: 0.3s all ease-in-out;
-}
-
-.radioLabel.active {
-  background: rgba(110, 117, 240, 0.3);
 }
