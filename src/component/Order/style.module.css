@@ -23,16 +23,20 @@
   width: 570px;
   display: flex;
   flex-direction: column;
+  overflow: auto;
+  padding-right: 10px;
 }
 
 .deliveryContainer {
   width: 364px;
   border-right: 1px solid rgba(0, 0, 64, 0.1);
   border-left: 1px solid rgba(0, 0, 64, 0.1);
+  padding: 0 10px 0 10px;
 }
 
 .paymentContainer {
   width: 506px;
+  padding-left: 10px;
 }
 
 .backBtn {
@@ -61,7 +65,6 @@
 
 .itemsInfo {
   margin-bottom: 20px;
-  padding-right: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -69,13 +72,11 @@
 
 .deliveryInfo {
   margin-bottom: 20px;
-  padding-left: 10px;
   display: flex;
 }
 
 .paymentInfo {
   margin-bottom: 20px;
-  padding-left: 10px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -106,4 +107,69 @@
 
 .number {
   color: #1a2c9c;
+}
+
+.input {
+  border: 1px solid rgba(6, 13, 31, 0.1);
+  color: rgba(6, 10, 22, 0.4);
+  background: #fff;
+  padding: 4px 6px;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  width: 344px;
+  margin-top: 4px;
+}
+
+.input::placeholder {
+  color: rgba(6, 13, 31, 0.2);
+}
+
+.inputDescription {
+  font-weight: 800;
+  font-size: 12px;
+  line-height: 15px;
+  letter-spacing: -0.05em;
+
+  color: rgba(6, 10, 22, 0.4);
+}
+
+.inputContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  margin-bottom: 20px;
+}
+
+.radioGrid {
+  height: 330px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 10px;
+  grid-template-rows: repeat(4, 1fr);
+  row-gap: 10px;
+}
+
+.bigRow {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}
+
+.radioContainer input {
+  display: none;
+}
+
+.radioLabel {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ededf2;
+  transition: 0.3s all ease-in-out;
+}
+
+.radioLabel.active {
+  background: rgba(110, 117, 240, 0.3);
 }
