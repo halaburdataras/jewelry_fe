@@ -4,6 +4,7 @@ import Logo from "../Logo";
 import cart from "../../assets/svg/cart.svg";
 
 import s from "./style.module.css";
+import { Link } from "react-router-dom";
 
 const Header = ({ setOpenCart, setOpenFollow }) => {
   const handleOpenCart = () => {
@@ -15,10 +16,16 @@ const Header = ({ setOpenCart, setOpenFollow }) => {
   return (
     <header>
       <ul className={s.menu}>
-        <li>Home</li>
-        <li>Catalog</li>
         <li>
-          <Logo />
+          <Link to="/">Home</Link>
+        </li>
+        <li>
+          <Link to="catalog">Catalog</Link>
+        </li>
+        <li>
+          <Link to="/">
+            <Logo />
+          </Link>
         </li>
         <li>FAQ</li>
         <li onClick={handleOpenFollow}>Follow us</li>
