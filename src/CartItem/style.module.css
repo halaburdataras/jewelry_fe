@@ -30,3 +30,21 @@
   border: 1px solid rgba(6, 13, 31, 0.1);
   align-self: center;
 }
+
+.price {
+  font-weight: 600;
+  font-size: 20px;
+  line-height: 26px;
+}
+
+.blue {
+  color: #1a2c9c;
+}
+
+.name {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+
+  color: rgba(0, 0, 0, 0.6);
+}

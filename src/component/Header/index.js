@@ -1,39 +1,42 @@
 import React from "react";
 
 import Logo from "../Logo";
-import cart from "../../assets/svg/cart.svg";
 
 import s from "./style.module.css";
 import { Link } from "react-router-dom";
+import CartIcon from "../CartIcon";
 
 const Header = ({ setOpenCart, setOpenFollow }) => {
-  const handleOpenCart = () => {
-    setOpenCart("half");
-  };
   const handleOpenFollow = () => {
     setOpenFollow(true);
   };
+
+  const handleCloseCart = () => {
+    setOpenCart("close");
+  };
+
   return (
     <header>
       <ul className={s.menu}>
         <li>
-          <Link to="/">Home</Link>
+          <Link to="/" onClick={handleCloseCart}>
+            Home
+          </Link>
         </li>
         <li>
-          <Link to="catalog">Catalog</Link>
+          <Link to="catalog" onClick={handleCloseCart}>
+            Catalog
+          </Link>
         </li>
         <li>
-          <Link to="/">
+          <Link to="/" onClick={handleCloseCart}>
             <Logo />
           </Link>
         </li>
         <li>FAQ</li>
         <li onClick={handleOpenFollow}>Follow us</li>
       </ul>
-      <div className={s.cart} onClick={handleOpenCart}>
-        <img src={cart} alt="cart" />
-        <span className={s.cartText}>Cart</span>
-      </div>
+      <CartIcon setOpenCart={setOpenCart} />
     </header>
   );
 };

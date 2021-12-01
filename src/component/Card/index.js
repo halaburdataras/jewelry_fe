@@ -12,9 +12,14 @@ const Card = ({ item, action }) => {
       <div className={s.actionsContainer}>
         <p className={s.desc}>
           <span>{item.price} UAH</span>
-          {item.description}
+          <span className={s.name}>{item.name}</span>
         </p>
-        <Button action={action} title="ADD TO CART" />
+        <Button
+          action={() => {
+            action(item);
+          }}
+          title="ADD TO CART"
+        />
       </div>
     </div>
   );

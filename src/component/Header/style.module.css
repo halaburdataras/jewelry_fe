@@ -27,19 +27,3 @@ header {
 .menu li + li {
   margin-left: 100px;
 }
-
-.cart {
-  cursor: pointer;
-  position: absolute;
-  right: 80px;
-  display: flex;
-  align-items: center;
-}
-
-.cartText {
-  font-weight: 600;
-  font-size: 16px;
-  line-height: 20px;
-  color: #060a16;
-  margin-left: 4px;
-}

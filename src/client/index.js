@@ -32,15 +32,13 @@ export const getItems = async (query, variables = {}) => {
 
 export const setItems = async (query, variables) => {
   try {
-    await client.mutate({
+    return await client.mutate({
       mutation: gql`
         ${query}
       `,
       variables,
       fetchPolicy: "no-cache",
     });
-
-    return await setItems(query, variables);
   } catch (e) {
     throw new Error(e.message);
   }

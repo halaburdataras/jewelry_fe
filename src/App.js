@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import "./App.css";
 import Catalog from "./pages/Catalog";
 import FollowUs from "./component/FollowUs";
@@ -7,15 +7,23 @@ import Header from "./component/Header";
 import Modal from "./component/Modal";
 import Main from "./pages/Main";
 import { Route, Routes } from "react-router";
+import { useDispatch } from "react-redux";
+import { getCart } from "./redux/cart/cart.actions";
 
 function App() {
+  const dispatch = useDispatch();
   const [open, setOpen] = useState("close");
   const [openFollow, setOpenFollow] = useState(false);
+
   if (open === "full") {
     document.body.style.overflow = "hidden";
   } else {
     document.body.style.overflow = "visible";
   }
+
+  useEffect(() => {
+    dispatch(getCart());
+  }, [dispatch]);
   return (
     <div className={`App ${open === "full" && "disable"}`}>
       <Header setOpenFollow={setOpenFollow} setOpenCart={setOpen} />
@@ -25,7 +33,7 @@ function App() {
           <Route path="catalog" element={<Catalog />} />
         </Routes>
       </section>
-      <Footer setOpen={setOpen} />
+      <Footer setOpenFollow={setOpenFollow} setOpenCart={setOpen} />
       <FollowUs open={openFollow} setOpen={setOpenFollow} />
       <Modal open={open} setOpen={setOpen} />
     </div>

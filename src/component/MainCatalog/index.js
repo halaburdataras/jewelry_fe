@@ -6,17 +6,24 @@ import { Link } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { ringSelector } from "../../redux/selectors/ring.selectors";
 import { getRings } from "../../redux/rings/rings.actions";
+import { addToCart } from "../../redux/cart/cart.actions";
 
 const MainCatalog = () => {
   const dispatch = useDispatch();
 
   const { items } = useSelector(ringSelector);
 
+  const handleAddToCart = (item) => {
+    dispatch(addToCart(item));
+  };
+
   useEffect(() => {
-    dispatch(getRings(10));
+    dispatch(getRings(5));
   }, [dispatch]);
 
-  const allRings = items.map((el) => <Card item={el} />);
+  const allRings = items.map((el) => (
+    <Card item={el} action={handleAddToCart} />
+  ));
 
   return (
     <section className={s.catalog}>
