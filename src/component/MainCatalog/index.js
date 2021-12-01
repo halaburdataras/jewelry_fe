@@ -10,7 +10,7 @@ import { getRings } from "../../redux/rings/rings.actions";
 const MainCatalog = () => {
   const dispatch = useDispatch();
 
-  const { items, loading } = useSelector(ringSelector);
+  const { items } = useSelector(ringSelector);
 
   useEffect(() => {
     dispatch(getRings(10));

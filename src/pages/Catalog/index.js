@@ -9,7 +9,7 @@ import { ringSelector } from "../../redux/selectors/ring.selectors";
 const Catalog = () => {
   const dispatch = useDispatch();
 
-  const { items, loading } = useSelector(ringSelector);
+  const { items } = useSelector(ringSelector);
 
   console.log(items);
 
