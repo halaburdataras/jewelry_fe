@@ -1,15 +1,23 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Card from "../Card";
 
-import r1 from "../../assets/img/rings/1.png";
-import r2 from "../../assets/img/rings/2.png";
-import r3 from "../../assets/img/rings/3.png";
-import r4 from "../../assets/img/rings/4.png";
-import r5 from "../../assets/img/rings/5.png";
 import s from "./style.module.css";
 import { Link } from "react-router-dom";
+import { useDispatch, useSelector } from "react-redux";
+import { ringSelector } from "../../redux/selectors/ring.selectors";
+import { getRings } from "../../redux/rings/rings.actions";
 
 const MainCatalog = () => {
+  const dispatch = useDispatch();
+
+  const { items, loading } = useSelector(ringSelector);
+
+  useEffect(() => {
+    dispatch(getRings(10));
+  }, [dispatch]);
+
+  const allRings = items.map((el) => <Card item={el} />);
+
   return (
     <section className={s.catalog}>
       <div className={s.header}>
@@ -18,14 +26,7 @@ const MainCatalog = () => {
           <Link to="catalog">See All</Link>
         </h3>
       </div>
-      <div className={s.container}>
-        <Card image={r1} />
-        <Card image={r2} />
-        <Card image={r3} />
-        <Card image={r4} />
-        <Card image={r5} />
-        <Card image={r1} />
-      </div>
+      <div className={s.container}>{allRings}</div>
     </section>
   );
 };

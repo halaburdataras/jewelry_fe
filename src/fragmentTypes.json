@@ -1,0 +1,18 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "UNION",
+        "name": "RingResult",
+        "possibleTypes": [
+          {
+            "name": "Ring"
+          },
+          {
+            "name": "Error"
+          }
+        ]
+      }
+    ]
+  }
+}
