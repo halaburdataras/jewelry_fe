@@ -13,7 +13,7 @@ const Slider = () => {
 
   useEffect(() => {
     dispatch(getPromotions());
-  }, []);
+  }, [dispatch]);
 
   console.log(items);
 
