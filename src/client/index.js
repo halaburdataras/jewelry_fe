@@ -9,7 +9,7 @@ const fragmentMatcher = new IntrospectionFragmentMatcher({
 });
 
 export const client = new ApolloClient({
-  link: createUploadLink({ uri: "http://localhost:5000/graphql" }),
+  link: createUploadLink({ uri: "https://jewelry-be.herokuapp.com/graphql" }),
   cache: new InMemoryCache({
     addTypename: false,
     fragmentMatcher,
