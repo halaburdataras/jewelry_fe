@@ -1,13 +1,27 @@
 header {
   height: 134px;
-  display: flex;
-}
-
-.menu {
   width: 100%;
+  background: rgba(255, 255, 255, 0.9);
+  backdrop-filter: blur(40px);
+  z-index: 10;
   display: flex;
   justify-content: center;
   align-items: center;
+  position: fixed;
+  left: 0;
+  top: 0;
+  border-bottom: 1px solid rgba(13, 8, 78, 0.2);
+}
+
+.menu {
+  width: 766px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.menu li {
+  cursor: pointer;
 }
 
 .menu li + li {

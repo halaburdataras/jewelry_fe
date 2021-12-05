@@ -3,43 +3,44 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  overflow: visible;
+}
+
+.App.disable {
+  overflow: hidden;
 }
 
 .main {
   max-width: 1440px;
+  padding-top: 150px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.cartNumber {
+  background: #1a2c9c;
+  border-radius: 50px;
+  height: 16px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  color: #ffffff;
+  font-weight: 800;
+  font-size: 10px;
+  line-height: 16px;
+  padding: 0 6px 0 6px;
 }
 
-.App-link {
-  color: #61dafb;
+.cart {
+  cursor: pointer;
+  position: absolute;
+  right: 80px;
+  display: flex;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.cartText {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #060a16;
+  margin-left: 4px;
 }
