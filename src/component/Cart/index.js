@@ -85,9 +85,13 @@ const Cart = ({ setOpen }) => {
       </div>
       <div className={s.deleteContainer}>
         {canDelete && (
-          <p className={s.delText} onClick={handleClearCart}>
-            Delete selected
-          </p>
+          <div className={s.delBtn}>
+            <Button
+              type="black"
+              title="Delete selected"
+              action={handleClearCart}
+            />
+          </div>
         )}
       </div>
       <div className={s.content}>{allCartItems}</div>

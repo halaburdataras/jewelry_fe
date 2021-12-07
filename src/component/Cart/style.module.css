@@ -11,7 +11,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 0 30px 20px 30px;
+  padding: 0 30px 0 30px;
 }
 
 .close {
@@ -55,14 +55,14 @@
 }
 
 .deleteContainer {
-  height: 40px;
+  height: 68px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
+  margin-bottom: 10px;
 }
 
-.delText {
-  font-size: 20px;
-  cursor: pointer;
-  margin-left: 16px;
+.delBtn {
+  width: 190px;
+  height: 100%;
 }

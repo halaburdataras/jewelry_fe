@@ -1,8 +1,9 @@
 import React, { useState } from "react";
+import { NavLink } from "react-router-dom";
 
 import s from "./style.module.css";
 
-const Button = ({ type, title, action }) => {
+const Button = ({ type, title, action, isLink, path }) => {
   const [style, setStyle] = useState(false);
   const findStyle = () => {
     switch (type) {
@@ -23,6 +24,19 @@ const Button = ({ type, title, action }) => {
   const handleReleaseBtn = () => {
     setStyle(false);
   };
+  if (isLink) {
+    return (
+      <NavLink
+        className={`${s.button} ${findStyle()} ${style && s.active}`}
+        to={path}
+        onMouseDown={handleClickBtn}
+        onMouseUp={handleReleaseBtn}
+      >
+        <div className={s.star} />
+        <span className={s.title}>{title}</span>
+      </NavLink>
+    );
+  }
   return (
     <div
       className={`${s.button} ${findStyle()} ${style && s.active}`}

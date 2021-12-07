@@ -12,7 +12,12 @@ const Slide = () => {
         <p className={s.collection}>New spring ring</p>
         <p className={s.name}>“Black Sea”</p>
         <div className={s.btnContainer}>
-          <Button type="white" title="BUY NOW" />
+          <Button
+            type="white"
+            title="BUY NOW"
+            isLink
+            path="/goods/61a69185c117484d04a45844"
+          />
         </div>
       </div>
       <img className={s.img} src={ring} alt="ring" />
