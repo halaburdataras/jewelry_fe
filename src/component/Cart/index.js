@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import CartItem from "../../CartItem";
 import Button from "../Button";
 
@@ -6,10 +6,12 @@ import s from "./style.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import { formOrder } from "../../redux/order/order.actions";
 import { findQuantity } from "../../utils";
+import { clearCart, removeFromCart } from "../../redux/cart/cart.actions";
 
 const Cart = ({ setOpen }) => {
   const dispatch = useDispatch();
   const [checked, setChecked] = useState([]);
+  const [canDelete, setCanDelete] = useState(false);
   const { cartItems } = useSelector((state) => ({
     cartItems: state.Cart.cart,
   }));
@@ -25,6 +27,14 @@ const Cart = ({ setOpen }) => {
     }
   };
 
+  const handleSelectAll = () => {
+    if (checked.length === cartItems.length) {
+      setChecked([]);
+      return;
+    }
+    setChecked(cartItems);
+  };
+
   const handleCheckItem = (item) => {
     setChecked((prev) => {
       const possibleItem = prev.find((el) => el.id === item.id);
@@ -38,9 +48,28 @@ const Cart = ({ setOpen }) => {
       return newChecked;
     });
   };
+
+  const handleClearCart = () => {
+    if (cartItems.length === checked.length) dispatch(clearCart());
+    else {
+      checked.forEach((el) => {
+        dispatch(removeFromCart(el.id));
+      });
+    }
+    setChecked([]);
+  };
+
   const allCartItems = cartItems.map((el) => {
+    if (checked.find((item) => item.id === el.id)) {
+      return <CartItem item={el} checked action={handleCheckItem} checkbox />;
+    }
     return <CartItem item={el} action={handleCheckItem} checkbox />;
   });
+
+  useEffect(() => {
+    if (checked.length) setCanDelete(true);
+    else setCanDelete(false);
+  }, [checked]);
 
   return (
     <section className={`${s.cart}`}>
@@ -50,7 +79,16 @@ const Cart = ({ setOpen }) => {
           Cart • <span className={s.number}>{findQuantity(cartItems)}</span>{" "}
           goods
         </div>
-        <div className={s.select}>Select all</div>
+        <div className={s.select} onClick={handleSelectAll}>
+          Select all
+        </div>
+      </div>
+      <div className={s.deleteContainer}>
+        {canDelete && (
+          <p className={s.delText} onClick={handleClearCart}>
+            Delete selected
+          </p>
+        )}
       </div>
       <div className={s.content}>{allCartItems}</div>
       <div className={s.btnContainer}>

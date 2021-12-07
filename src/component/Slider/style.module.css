@@ -1,15 +1,16 @@
-.slider{
-    height: 709px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.slider {
+  height: 709px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-.slideContainer{
-    width: 1280px;
-    height: 589px;
-    background: #000;
-    -webkit-box-shadow: 21px 25px 42px -26px rgba(0,0,0,0.75);
-    -moz-box-shadow: 21px 25px 42px -26px rgba(0,0,0,0.75);
-    box-shadow: 21px 25px 42px -26px rgba(0,0,0,0.75);
+.slideContainer {
+  width: 1280px;
+  height: 589px;
+  background: #000;
+  position: relative;
+  -webkit-box-shadow: 21px 25px 42px -26px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 21px 25px 42px -26px rgba(0, 0, 0, 0.75);
+  box-shadow: 21px 25px 42px -26px rgba(0, 0, 0, 0.75);
 }

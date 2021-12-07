@@ -10,6 +10,8 @@ const Button = ({ type, title, action }) => {
         return s.whiteBtn;
       case "black":
         return s.blackBtn;
+      case "info":
+        return s.infoBtn;
       default:
         return s.grayBtn;
     }

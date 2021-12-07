@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { getPromotions } from "../../redux/promotion/promotion.actions";
 import { promotionSelector } from "../../redux/selectors/promotion.selectors";
+import SaphireIcon from "../SaphireIcon";
 import Slide from "./Slide";
 
 import s from "./style.module.css";
@@ -21,6 +22,7 @@ const Slider = () => {
     <section className={s.slider}>
       <div className={s.slideContainer}>
         <Slide />
+        <SaphireIcon />
       </div>
     </section>
   );

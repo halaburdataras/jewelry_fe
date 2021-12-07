@@ -9,6 +9,7 @@ import Main from "./pages/Main";
 import { Route, Routes } from "react-router";
 import { useDispatch } from "react-redux";
 import { getCart } from "./redux/cart/cart.actions";
+import Goods from "./pages/Goods";
 
 function App() {
   const dispatch = useDispatch();
@@ -30,7 +31,8 @@ function App() {
       <section className="main">
         <Routes>
           <Route path="/" element={<Main />} />
-          <Route path="catalog" element={<Catalog />} />
+          <Route path="/catalog" element={<Catalog />} />
+          <Route path="/goods/:id" exact element={<Goods />} />
         </Routes>
       </section>
       <Footer setOpenFollow={setOpenFollow} setOpenCart={setOpen} />

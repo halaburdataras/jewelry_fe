@@ -1,0 +1,75 @@
+.collection {
+  width: 100%;
+  height: 650px;
+  margin-top: 50px;
+}
+
+.container {
+  height: 630px;
+  max-width: 1280px;
+  display: grid;
+  grid-template-columns: 600px 1fr;
+  background: linear-gradient(283.69deg, #050505 -3.61%, #06102b 100.15%),
+    #c4c4c4;
+  position: relative;
+}
+
+.container svg {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+.collection_img {
+  transform: translate(-109px, -60px);
+}
+
+.textContainer {
+  height: calc(100% - 111px);
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.header {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+  color: #fff;
+}
+
+.descriptionContainer {
+  color: #fff;
+  text-align: left;
+}
+
+.descriptionContainer p:nth-child(1) {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 31px;
+}
+
+.descriptionContainer p:nth-child(2) {
+  margin-top: 10px;
+  font-style: normal;
+  font-weight: 300;
+  font-size: 16px;
+  line-height: 20px;
+}
+.descriptionContainer p:nth-child(3) {
+  margin-top: 20px;
+  margin-bottom: 50px;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 31px;
+}
+.link {
+  color: white;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 20px;
+}

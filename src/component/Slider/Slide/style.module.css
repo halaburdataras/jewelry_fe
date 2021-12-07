@@ -2,6 +2,7 @@
   width: 100%;
   height: 100%;
   position: relative;
+  display: flex;
 }
 
 .ui {
@@ -24,7 +25,37 @@
 .btnContainer {
   width: 290px;
   height: 70px;
-  position: absolute;
   left: 90px;
   bottom: 135px;
+}
+
+.advertising {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  color: w;
+  text-align: left;
+  height: 100%;
+  justify-content: center;
+  padding-left: 90px;
+}
+
+.collection {
+  font-weight: 600;
+  font-size: 32px;
+  line-height: 41px;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.name {
+  font-weight: 600;
+  font-size: 102px;
+  line-height: 130px;
+  color: rgba(255, 255, 255, 1);
+  margin: 10px 0 41px 0;
+}
+.img {
+  position: absolute;
+  right: 47px;
+  top: 93px;
 }

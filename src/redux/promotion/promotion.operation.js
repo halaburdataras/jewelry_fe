@@ -3,9 +3,8 @@ import { getItems } from "../../client";
 export const getAllPromotions = async () => {
   const promotionInfo = `
       mutation {
-          getAllPromotions{
-              id
-          }
+        getAllPromotions{
+          id
         }
       }
     `;
