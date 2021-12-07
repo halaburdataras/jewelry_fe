@@ -20,4 +20,5 @@
   width: 100%;
   background: rgba(255, 255, 255, 1);
   box-shadow: none;
+  overflow: auto;
 }
