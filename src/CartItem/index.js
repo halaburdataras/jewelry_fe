@@ -2,7 +2,7 @@ import React from "react";
 
 import s from "./style.module.css";
 
-const CartItem = ({ item, checkbox, action }) => {
+const CartItem = ({ item, checkbox, checked, action }) => {
   return (
     <div className={s.cartItem}>
       <img src={item.photo} className={s.image} alt="selected ring" />
@@ -15,6 +15,7 @@ const CartItem = ({ item, checkbox, action }) => {
       {checkbox && (
         <input
           className={s.checkbox}
+          checked={checked}
           type="checkbox"
           onChange={() => {
             action(item);

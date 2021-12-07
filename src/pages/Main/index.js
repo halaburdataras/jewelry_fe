@@ -1,4 +1,5 @@
 import React from "react";
+import Collection from "../../component/Collection";
 import MainCatalog from "../../component/MainCatalog";
 import Slider from "../../component/Slider";
 
@@ -7,6 +8,7 @@ const Main = () => {
     <div>
       <Slider />
       <MainCatalog />
+      <Collection />
     </div>
   );
 };

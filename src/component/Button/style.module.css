@@ -49,6 +49,19 @@
   background-image: url(../../assets/svg/star_black.svg);
 }
 
+.infoBtn {
+  background: linear-gradient(
+      0deg,
+      rgba(255, 255, 255, 0.1),
+      rgba(255, 255, 255, 0.1)
+    ),
+    linear-gradient(283.69deg, #050505 -3.61%, #06102b 100.15%);
+  color: #fff;
+}
+.infoBtn .star {
+  background-image: url(../../assets/svg/star_gray.svg);
+}
+
 .grayBtn {
   background-color: rgba(255, 255, 255, 0.1);
 }
